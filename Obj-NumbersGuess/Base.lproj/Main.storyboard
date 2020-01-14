@@ -20,7 +20,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="113"/>
+            <point key="canvasLocation" x="74" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EML-Yl-J0C">
@@ -35,7 +35,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUh-j1-Mro" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-348" y="272"/>
+            <point key="canvasLocation" x="-549" y="-145"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Cjd-dF-QFj">
+            <objects>
+                <viewController id="GBI-A6-j9J" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qlF-Q9-jri">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="thK-YM-aYL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsS-LN-gVO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="-159"/>
         </scene>
     </scenes>
 </document>
