@@ -30,18 +30,24 @@
                                     <segue destination="HOQ-rZ-1no" kind="show" id="t7S-cG-NeH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Aj-oR-5F5">
-                                <rect key="frame" x="65" y="556" width="284" height="272"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oCB-WM-jdX">
+                                <rect key="frame" x="127" y="552" width="177" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="cog+customize+gear+preferences+settings+icon-1320196713018521005.png"/>
+                                <segments>
+                                    <segment title="Light mode"/>
+                                    <segment title="Dark mode"/>
+                                </segments>
                                 <connections>
-                                    <segue destination="XgK-mr-XXX" kind="show" id="jXD-hb-ocg"/>
+                                    <action selector="colorSeg:" destination="BYZ-38-t0r" eventType="valueChanged" id="caE-Oo-df4"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="segment" destination="oCB-WM-jdX" id="Jk1-cQ-RY9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,13 +99,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-Li-nVA">
-                                <rect key="frame" x="89" y="476" width="230" height="258"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zz-yE-AUG">
                                 <rect key="frame" x="232" y="191" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -133,9 +132,7 @@
                         <outlet property="answer" destination="Vs1-tv-QDF" id="bG3-nd-CQq"/>
                         <outlet property="guessBtn" destination="kEb-Uw-kB3" id="ohV-7n-6Rn"/>
                         <outlet property="guessField" destination="yNo-4T-fiC" id="Ef1-bY-1DI"/>
-                        <outlet property="levelShow" destination="t40-dF-6bE" id="tSC-e5-OCu"/>
                         <outlet property="pointView" destination="Ct9-k4-QJC" id="n7c-0Z-ELj"/>
-                        <outlet property="stars" destination="dDC-Li-nVA" id="Pkf-dI-QrJ"/>
                         <outlet property="stepper" destination="zU5-VL-Bdn" id="gka-EM-Duj"/>
                     </connections>
                 </viewController>
@@ -143,39 +140,9 @@
             </objects>
             <point key="canvasLocation" x="-549.27536231884062" y="-145.3125"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="lE9-cs-Wp1">
-            <objects>
-                <viewController id="XgK-mr-XXX" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uDw-Aa-l03">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-cH-3Ha">
-                                <rect key="frame" x="20" y="721" width="109" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back" backgroundImage="arrowshape.turn.up.left.fill" catalog="system"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="DVS-0a-PeE"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="284-es-Nb2"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="NZa-U5-d7O"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sjq-ZA-2XO" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1184" y="-145"/>
-        </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
         <image name="backgroundbig.jpg" width="1200" height="630"/>
-        <image name="cog+customize+gear+preferences+settings+icon-1320196713018521005.png" width="384" height="384"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="haa-re-1bd"/>
-    </inferredMetricsTieBreakers>
 </document>

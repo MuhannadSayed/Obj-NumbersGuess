@@ -17,7 +17,6 @@
 		71E87A3123CD82D000B2542B /* Obj_NumbersGuessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E87A3023CD82D000B2542B /* Obj_NumbersGuessTests.m */; };
 		71E87A3C23CD82D000B2542B /* Obj_NumbersGuessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E87A3B23CD82D000B2542B /* Obj_NumbersGuessUITests.m */; };
 		71E87A8E23CDC5E400B2542B /* backgroundbig.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71E87A8D23CDC5E400B2542B /* backgroundbig.jpg */; };
-		71E87A9023CDC67500B2542B /* cog+customize+gear+preferences+settings+icon-1320196713018521005.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E87A8F23CDC67500B2542B /* cog+customize+gear+preferences+settings+icon-1320196713018521005.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 		71E87A3B23CD82D000B2542B /* Obj_NumbersGuessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Obj_NumbersGuessUITests.m; sourceTree = "<group>"; };
 		71E87A3D23CD82D000B2542B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71E87A8D23CDC5E400B2542B /* backgroundbig.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroundbig.jpg; path = ../../../Desktop/backgroundbig.jpg; sourceTree = "<group>"; };
-		71E87A8F23CDC67500B2542B /* cog+customize+gear+preferences+settings+icon-1320196713018521005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog+customize+gear+preferences+settings+icon-1320196713018521005.png"; path = "../../../Downloads/cog+customize+gear+preferences+settings+icon-1320196713018521005.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 				71E87A1A23CD82CE00B2542B /* ViewController.h */,
 				71E87A1B23CD82CE00B2542B /* ViewController.m */,
 				71E87A1D23CD82CE00B2542B /* Main.storyboard */,
-				71E87A8F23CDC67500B2542B /* cog+customize+gear+preferences+settings+icon-1320196713018521005.png */,
 				71E87A8D23CDC5E400B2542B /* backgroundbig.jpg */,
 				71E87A2023CD82D000B2542B /* Assets.xcassets */,
 				71E87A2223CD82D000B2542B /* LaunchScreen.storyboard */,
@@ -249,7 +246,6 @@
 				71E87A2423CD82D000B2542B /* LaunchScreen.storyboard in Resources */,
 				71E87A2123CD82D000B2542B /* Assets.xcassets in Resources */,
 				71E87A8E23CDC5E400B2542B /* backgroundbig.jpg in Resources */,
-				71E87A9023CDC67500B2542B /* cog+customize+gear+preferences+settings+icon-1320196713018521005.png in Resources */,
 				71E87A1F23CD82CE00B2542B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
