@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *answer;
+
 @property (weak, nonatomic) IBOutlet UIButton *guessBtn;
 @property (weak, nonatomic) IBOutlet UILabel *pointView;
 @property (weak, nonatomic) IBOutlet UITextField *guessField;
@@ -42,12 +43,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
-
+    
+    
     [_guessBtn addTarget:self action:@selector(buttonPressed:)
      forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:_guessBtn];
+    
+    
  
 }
 
@@ -89,10 +92,13 @@
     if(self.segment.selectedSegmentIndex == 0){
         self.view.backgroundColor=[UIColor whiteColor];
         [[UIView appearance] setBackgroundColor:[UIColor whiteColor]];
+        NSUserDefaults *settings = [NSUserDefaults standardUserDefaults]; [settings setInteger:0 forKey:@"colorCheck"];
+        [settings synchronize];
     }else{
         self.view.backgroundColor = [UIColor darkGrayColor];
-        
         [[UIView appearance] setBackgroundColor:[UIColor darkGrayColor]];
+        NSUserDefaults *settings = [NSUserDefaults standardUserDefaults]; [settings setInteger:1 forKey:@"colorCheck"];
+        [settings synchronize];
         
     }
 }
