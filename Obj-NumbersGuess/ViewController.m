@@ -17,6 +17,7 @@
 @property (nonatomic) int point ;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 @property (nonatomic) int level;
+@property (nonatomic) int tempColor;
 @property (weak, nonatomic) IBOutlet UILabel *levelShow;
 - (IBAction)modifyLevel:(id)sender;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
@@ -39,12 +40,28 @@
 }
 
 
+-(void)appearance {
+NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+ NSInteger check =
+ [settings integerForKey:@"colorCheck"];
+    NSLog (@"%li" , (long)check);
+ 
+     [self darkMode:check];
+ 
+     
+     
+     
+}
 
+ 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   //[self appearance];
     
     
+    
+     
     [_guessBtn addTarget:self action:@selector(buttonPressed:)
      forControlEvents:UIControlEventTouchUpInside];
 
@@ -90,16 +107,30 @@
 - (IBAction)colorSeg:(id)sender {
     
     if(self.segment.selectedSegmentIndex == 0){
+        _tempColor = 0;
+        [self darkMode:_tempColor];
+        
+    }else{
+        _tempColor = 1;
+        [self darkMode:_tempColor];
+        
+        
+    }
+}
+-(void)darkMode: (int)color{
+    if (color == 0){
         self.view.backgroundColor=[UIColor whiteColor];
         [[UIView appearance] setBackgroundColor:[UIColor whiteColor]];
         NSUserDefaults *settings = [NSUserDefaults standardUserDefaults]; [settings setInteger:0 forKey:@"colorCheck"];
         [settings synchronize];
-    }else{
+        
+    }else if (color == 1){
         self.view.backgroundColor = [UIColor darkGrayColor];
         [[UIView appearance] setBackgroundColor:[UIColor darkGrayColor]];
         NSUserDefaults *settings = [NSUserDefaults standardUserDefaults]; [settings setInteger:1 forKey:@"colorCheck"];
         [settings synchronize];
-        
     }
+    
+    
 }
 @end
